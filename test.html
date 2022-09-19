@@ -1,0 +1,215 @@
+
+<body>
+<svg height="1400px" width="2400px" viewBox="0 0 1400 1400">
+    
+    <g transform="translate(0,0) scale(1.0, 1.0)">
+        <foreignObject x="970px" y="72px" width="800px" height="600px">
+            <video id="hocker1" xmlns="http://www.w3.org/1999/xhtml" width="800px" loop muted autoplay style="position: fixed; left: 0px; top: 0px;">
+                <source src="../../Media/Videos/FourthIterationComposition/Clip Hockerrotation 1.mp4" type="video/mp4" />
+            </video>
+        </foreignObject>
+    </g>
+    <g transform="translate(0,0) scale(1.0, 1.0)">
+        <foreignObject x="100px" y="670" width="400px" height="300px">
+            <video id="pedal1" xmlns="http://www.w3.org/1999/xhtml" width="400px" loop muted autoplay style="position: fixed; left: 0px; top: 0px;">
+                <source src="../../Media/Videos/FourthIterationComposition/Clip Pedal.mp4" type="video/mp4" />
+            </video>
+        </foreignObject>
+    </g>
+    <g transform="translate(500,880)">
+        <g id="wheel" transform="rotate(125 125)" >
+            <path d="M 125,25 A 100 100 1 0 0 125,225" 
+               fill="none" stroke="hsla(0,0%,50%,0.5)" stroke-width="50"/>
+            <path d="M 125,75 A 25 25 0 0 0 125,175" 
+               fill="hsla(0,0%,50%,0.5)" />
+         </g>
+    </g>
+    <!-- <g id="yup">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"></circle>
+    </g> -->
+    <g>
+        <text 
+            id="stimmung"
+            x="200px" 
+            y="135px" 
+            style="font-style:normal;
+                   font-weight:normal;
+                   font-size:22.58333302px;
+                   line-height:1.25;
+                   font-family:sans-serif;
+                   letter-spacing:0px;
+                   word-spacing:0px;
+                   fill:#000000;
+                   fill-opacity:1;
+                   stroke:none;
+                   stroke-width:0.26458332">
+            Die Stimmung setzt sich
+        </text>
+    </g>
+    <g id="verben">
+        <text 
+            id="verben"
+            x="300" 
+            y="155" 
+            style="font-style:thick;
+                   font-weight:2px;
+                   font-size:9.0px;
+                   line-height:1.25;
+                   font-family:sans-serif;
+                   letter-spacing:0px;
+                   word-spacing:0px;
+                   fill:#000000;
+                   fill-opacity:1;
+                   stroke:none;
+                   stroke-width:0.26458332">
+            (Stimmen, Setzen)
+        </text>
+    </g>
+    <g id="text2">
+        <text 
+            id="adrian"
+            x="310" 
+            y="255" 
+            style="font-style:normal;
+                   font-weight:normal;
+                   font-size:18.0px;
+                   line-height:1.25;
+                   font-family:serif;
+                   letter-spacing:0px;
+                   word-spacing:0px;
+                   fill:#000000;
+                   fill-opacity:1;
+                   stroke:none;
+                   stroke-width:0.26458332">
+                Adrián tritt wenige Schritte aus dem „Performance-Raum“ 
+        </text>
+    </g>
+    <g>
+        <text 
+            id="decke"
+            x="320px" 
+            y="535px" 
+            style="font-style:normal;
+                   font-weight:normal;
+                   font-size:22.58333302px;
+                   line-height:1.25;
+                   font-family:sans-serif;
+                   letter-spacing:0px;
+                   word-spacing:0px;
+                   fill:#000000;
+                   fill-opacity:1;
+                   stroke:none;
+                   stroke-width:0.26458332">
+            Die Decke legt sich
+        </text>
+    </g>
+
+    <g>
+        <text 
+            id="hannesetztan"
+            x="1200px" 
+            y="635px" 
+            style="font-style:normal;
+                   font-weight:normal;
+                   font-size:22.58333302px;
+                   line-height:1.25;
+                   font-family:sans-serif;
+                   letter-spacing:0px;
+                   word-spacing:0px;
+                   fill:#000000;
+                   fill-opacity:1;
+                   stroke:none;
+                   stroke-width:0.26458332">
+                   Hanne setzt an 
+        </text>
+    </g>
+    <g id="verbenFuerHanneSetztAn">
+        <text 
+            id="verben"
+            x="300" 
+            y="155" 
+            style="font-style:thick;
+                   font-weight:2px;
+                   font-size:9.0px;
+                   line-height:1.25;
+                   font-family:sans-serif;
+                   letter-spacing:0px;
+                   word-spacing:0px;
+                   fill:#000000;
+                   fill-opacity:1;
+                   stroke:none;
+                   stroke-width:0.26458332">
+            (Setzen)
+        </text>
+    </g>
+ </svg> 
+</body>
+
+ 
+ <script>
+    const hocker1Video = document.getElementById("hocker1");
+    const pedal1Video = document.getElementById("pedal1");  
+    const wheel = document.querySelector("#wheel");
+    const stimmung = document.getElementById("text1")
+    const adrian = document.getElementById("text2")
+    const verben = document.getElementById("verben")
+
+    function createTextField(text) {
+        let g = document.createElement("g");
+        g.setAttribute("id", "yeahhaa")
+        let circle = document.createElement("circle")
+        circle.setAttribute("cx", "50")
+        circle.setAttribute("cy", "50")
+        circle.setAttribute("r", "40")
+        circle.setAttribute("stroke", "black")
+        circle.setAttribute("stroke-width", "3")
+        circle.setAttribute("fill", "red")
+        // let text = g.createElement("text")
+        const svgs = document.getElementsByTagName("svg")
+        g.appendChild(circle)
+        svgs[0].appendChild(g)
+        console.log("hallo")
+    }
+
+    
+
+    let angle = 0;
+
+    function animate(time){        // Animieren mit requestAnimationFrame
+        angle += 1;
+        wheel.setAttribute("transform", "rotate(" + angle + " 125 125) ")
+        requestAnimationFrame(animate);
+    }
+
+    function DisplayDOM(id) {
+        let element = document.getElementById(id)
+        let displayed = element.getAttribute("display")
+        if (displayed=="none"){
+            element.setAttribute("display","inline")
+        } else {
+            element.setAttribute("display","none")
+        }
+    }
+
+    // requestAnimationFrame(animate);
+
+    document.getElementById("stimmung").addEventListener("click", ()=>{DisplayDOM("adrian")});
+    
+    document.getElementById("hannesetztan").addEventListener("click", ()=>{DisplayDOM("verbenFuerHanneSetztAn")});
+
+    document.getElementById("stimmung").addEventListener("mouseover", function(){
+        let displayed = verben.getAttribute("display")
+        if (displayed=="none"){
+            verben.setAttribute("display","inline")
+            pedal1Video.play();
+            createTextField("")
+        } else {
+            verben.setAttribute("display","none") 
+            pedal1Video.pause();
+        }
+        
+    });
+
+
+
+ </script>

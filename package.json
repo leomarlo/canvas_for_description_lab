@@ -1,0 +1,10 @@
+{
+  "name": "Animation",
+  "version": "1.0.0",
+  "description": "Create an interactive View Of the Description Method",
+  "main": "svgCreator.js",
+  "repository": "none",
+  "author": "Leonhard Horstmeyer",
+  "license": "MIT",
+  "private": null
+}
